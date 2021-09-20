@@ -1,0 +1,23 @@
+{% extends 'fandigo/layout.html' %}
+{% load i18n %}
+
+{% load account socialaccount %}
+
+{% block main %}
+    <div class="container">
+        <div class="mt-5">
+            <h1>Sign In</h1>
+            <p>If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.</p>
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                {% endif %}
+                <button class="primaryAction btn btn-secondary" type="submit">Sign In</button>
+                <a class="button secondaryAction ml-5"
+                   href="{% url 'account_reset_password' %}">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

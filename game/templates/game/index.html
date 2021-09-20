@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Fandigo</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+          rel="stylesheet"/>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'game/css/styles.css' %}" rel="stylesheet"/>
+</head>
+<body id="page-top">
+<!-- Navigation-->
+<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="{% url 'game_landing' %}">Fandigo</a></li>
+        <li class="sidebar-nav-item"><a href="{% url 'game_list' %}">Games</a></li>
+        {% if user.is_authenticated %}
+            <li class="sidebar-nav-item"><a href="{% url 'account_profile' %}">Account ({{ user.username }})</a></li>
+            <li class="sidebar-nav-item"><a href="{% url 'account_logout' %}">Logout</a></li>
+        {% else %}
+            <li class="sidebar-nav-item"><a href="{% url 'account_login' %}">Sign In</a></li>
+            <li class="sidebar-nav-item"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        {% endif %}
+    </ul>
+</nav>
+<!-- Header-->
+<header class="masthead d-flex align-items-center"
+        style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url('http://www.micrelmed.com/admin/files/images/sidebar/shutterstock_1121281460.jpg');">
+    <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">Fandigo</h1>
+        <h3 class="mb-5"><em>A Fun Way To Learn and Progress</em></h3>
+        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+    </div>
+</header>
+<!-- About-->
+<section class="content-section bg-light" id="about">
+    <div class="container px-4 px-lg-5 text-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-10">
+                <h2>Fandigo is the perfect tool for your kids education!</h2>
+                <p class="lead mb-5">
+                    This application features a flexible, challenging and most importantly exciting assortment of
+                    games and tasks that will make your kids learning an adventure.
+                </p>
+                <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services-->
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+            <h3 class="text-secondary mb-0">Services</h3>
+            <h2 class="mb-5">What We Offer</h2>
+        </div>
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
+                <h4><strong>Responsive</strong></h4>
+                <p class="text-faded mb-0">Looks great on any screen size!</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
+                <h4><strong>Redesigned</strong></h4>
+                <p class="text-faded mb-0">Freshly redesigned to match with version 5.0 of Bootstrap.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
+                <h4><strong>Suited</strong></h4>
+                <p class="text-faded mb-0">
+                    Specially tailored for helping kids with disabilities.
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
+                <h4><strong>Question</strong></h4>
+                <p class="text-faded mb-0">I mustache you a question...</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio-->
+<section class="content-section" id="portfolio">
+    <div class="container px-4 px-lg-5">
+        <div class="content-section-heading text-center">
+            <h3 class="text-secondary mb-0">Games</h3>
+            <h2 class="mb-5">Recent Entries</h2>
+        </div>
+        <div class="row gx-0">
+            <div class="col-lg-6">
+                <a class="portfolio-item" href="{% url "game_memory" %}">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <div class="h2">Memory</div>
+                            <p class="mb-0">A simple game of memory where the player, in this case you, needs to match
+                                the pairs of images.</p>
+                        </div>
+                    </div>
+                    <img class="img-fluid"
+                         src="https://i.pinimg.com/originals/73/0d/b4/730db4df9b783d47421fa0f53d8c4537.png" alt="..."/>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a class="portfolio-item" href="{% url "game_slider" %}">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <div class="h2">Slider</div>
+                            <p class="mb-0">A sliding puzzle is a combination puzzle that challenges a player to slide
+                                pieces along certain routes to establish a certain end-configuration.</p>
+                        </div>
+                    </div>
+                    <img class="img-fluid"
+                         src="https://3.bp.blogspot.com/-C9Lnl5qC9JY/W2KNPnTYUWI/AAAAAAAA1sc/gtRxdq2aIGoQqNeM5CChOpW_fqPX-pW9wCEwYBhgL/s1600/1018.JPG"
+                         alt="..."/>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a class="portfolio-item" href="#!">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <div class="h2">Strawberries</div>
+                            <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on
+                                top!</p>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'game/img/portfolio-3.jpg' %}" alt="..."/>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a class="portfolio-item" href="#!">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <div class="h2">Workspace</div>
+                            <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'game/img/portfolio-4.jpg' %}" alt="..."/>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Map-->
+<div class="map" id="contact">
+    <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <br/>
+    <small><a
+            href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+</div>
+<!-- Footer-->
+<footer class="footer text-center">
+    <div class="container px-4 px-lg-5">
+        <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+            </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Fandigo 2021</p>
+    </div>
+</footer>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'game/js/scripts.js' %}"></script>
+</body>
+</html>

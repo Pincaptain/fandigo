@@ -1,0 +1,78 @@
+body {
+    background-color: #f8f8f8;
+    color: #222;
+    text-align: center;
+    font-family: "Segoe UI Light", "Sourse Sans Pro", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    color: #333;
+}
+
+.canvas {
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    background-color: #eee;
+    position: relative;
+    border: 2px solid #DDD;
+    box-sizing: border-box;
+}
+
+.canvas > div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    line-height: 100px;
+    font-size: 2.4em;
+    background-color: #F1F1F1;
+    color: #4B5F6D;
+    font-weight: bold;
+    font-family: "Segoe UI Light", sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #DDD;
+}
+
+.canvas > div:not(.null) {
+    transition: .1s ease left, .1s ease top;
+    z-index: 50;
+}
+
+.win {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 600;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 900px rgba(0, 0, 0, .3), 0 0 15px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    padding: 30px;
+    display: none;
+}
+
+.win p {
+    font-size: 4em;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #fafafa;
+}

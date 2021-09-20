@@ -1,0 +1,45 @@
+{% extends 'fandigo/layout.html' %}
+
+{% block main %}
+    <div class="container">
+        <section>
+            <div class="card mt-5">
+                <div class="card-header">
+                    Quote of the Day
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Believe you can and you’re halfway there.</p>
+                        <footer class="blockquote-footer">By <cite title="Source Title">Theodore Roosevelt</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row mt-5">
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="p-3">
+                            <img src="https://cdn-icons-png.flaticon.com/512/163/163801.png" class="card-img-top"
+                                 alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+                            <p class="card-text text-muted">{{ user.username }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">King of the Hill</li>
+                            <li class="list-group-item">Quick Learner</li>
+                            <li class="list-group-item">Apprentice</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="{% url 'account_logout' %}" class="card-link">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8"></div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

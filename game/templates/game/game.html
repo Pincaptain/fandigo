@@ -1,0 +1,39 @@
+{% extends 'fandigo/layout.html' %}
+
+{% block main %}
+    <div class="container">
+        <div class="mt-5">
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">{{ game.name }}</h1>
+                    <p class="col-md-8 fs-4">{{ game.description }}</p>
+                    <a class="btn btn-primary btn-lg" type="button" href="{{ game.link }}">Play</a>
+                </div>
+            </div>
+            {% if user.is_authenticated %}
+                <div>
+                    <h1 class="mb-3">High Scores</h1>
+                    <div class="row">
+                        {% for score in scores %}
+                            {% if forloop.first %}
+                                <div class="card col-sm-3 m-2" style="width: 18rem; background-color: green;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white">Score</h5>
+                                        <h6 class="card-subtitle mb-2 text-white">{{ score.points }} points</h6>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="card col-sm-3 m-2" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Score</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">{{ score.points }} points</h6>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
