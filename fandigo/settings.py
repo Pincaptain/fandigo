@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!)*svo75c=dcy(plm#(a3!p+kc)%cgb-19m7%pv$%yl0x8cs_s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'fandigo.herokuapp.com/']
 
 # Application definition
 
