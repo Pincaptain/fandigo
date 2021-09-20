@@ -1,1 +1,3 @@
 web: gunicorn fandigo.wsgi --log-file -
+
+heroku ps:scale web=1
