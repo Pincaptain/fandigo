@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|VT323|Oswald');
+
+
+/******* Start of Header ****/
+.header {
+  height: 70px;
+  background:#343436;
+  color: rgb(181,179,175);
+  font-size: 28px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+img {
+  height:50px;
+  width:50px;
+  padding-right: 5px;
+}
+
+/******* End of Header ****/
+
+
+/******* Start of Simon Says ****/
+.dib {
+  display: inline-block;
+}
+
+.wrapper {
+  height: 382px;
+  width: 380px;
+  border-radius:50%;
+  background:#333;
+  box-shadow: 0px 0px 12px #222;
+  margin: auto;
+  margin-top: 10px;
+  padding-top: 6px;
+  position: relative;
+  text-align: center;
+  margin-top:35px;
+}
+
+.green {
+  height: 180px;
+  width: 180px;
+  background: green;
+  border-top-left-radius : 100%;
+}
+.red {
+  height: 180px;
+  width: 180px;
+  background: red;
+  border-top-right-radius : 100%;
+  margin-left: 5px;
+}
+.yellow {
+  height: 180px;
+  width: 180px;
+  background: yellow;
+  border-bottom-left-radius : 100%;
+  margin-top: 5px;
+}
+.blue {
+  height: 180px;
+  width: 180px;
+  background: blue;
+  border-bottom-right-radius : 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.yellow.light{
+  background-color : #fed93f;
+}
+
+.blue.light{
+  background-color : #1c8cff;
+}
+
+.red.light{
+  background-color : #ff4c4c;
+}
+
+.green.light{
+  background-color : #13ff7c;
+}
+
+
+
+/***** Controller *****/
+.controller {
+  height: 225px;
+  width: 225px;
+  background: #ECE7EE;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -111px;
+  margin-top: -108px;
+  border-radius: 50%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #333;
+}
+/***** FONT *****/
+.title-div {
+  font-family: 'Alfa Slab One', cursive;
+  color : #222;
+  width: 126px;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  margin-top: 23px;
+  margin-bottom:7px;
+}
+.text-title {
+  font-size: 33px;
+  font-weight: bold;
+}
+.reg-sign {
+  height: 30px;
+  vertical-align: text-top;
+  margin-top: -12px;
+}
+.text {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/**** Count Down *****/
+.clickable{
+  pointer-events: auto;
+  cursor:pointer;
+}
+
+.unclickable{
+  pointer-events:none;
+}
+
+.countup {
+  height: 80px;
+}
+.countnum {
+  font-family: 'VT323', monospace;
+  color : #DC0D29;
+  height: 40px;
+  width: 52px;
+  background-color: #32050C;
+  font-size: 25px;
+  position:relative;
+  border-radius : 10px;
+  vertical-align: middle;
+  border: 4px solid #222;
+  left: 0;
+  text-align: center;
+  top: 15px;
+}
+.color-numoff {
+  color:#67373e;
+}
+
+.count-text {
+  padding-top: 7px;
+}
+
+/*** Start Button ***/
+.start-div {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.start-btn {
+  background-color: #FC0102;
+  border-radius: 50%;
+  height: 29px;
+  width: 25px;
+  border : 4px solid #444;
+  box-shadow : 0px 1px 1px #222;
+  margin-top: -10px;
+}
+
+/*** Strict Button ***/
+
+.strict-div {
+  width: 30px;
+  height:80px;
+}
+
+.strict-btn {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 29px;
+  width: 25px;
+  border : 4px solid #444;
+  box-shadow : 0px 1px 1px #222;
+}
+
+.strict-light {
+  border-radius: 100%;
+  height: 6px;
+  width: 6px;
+  background-color: #32050C;
+  border: 2px solid #222;
+  margin-bottom: 5px;
+  margin-left:4px;
+}
+
+.led-on{
+  background-color:#DC0D29;
+}
+
+.led-off{
+  color:#430710;
+}
+
+/*** OFF/ ON Buttons ***/
+
+.offon-div{
+  margin-top: 2px;  
+}
+
+.offon-btns {
+  height: 26px;
+  width: 50px;
+  background: #222;
+  padding-top:1px;
+  border-radius:2px;
+  cursor: pointer;
+}
+
+.off-btn {
+  height: 20px;
+  width: 22px;
+  background: #3193DE;
+  margin-top:2px;
+  border-radius:2px;
+  position:relative;
+  margin-right: 23px;
+}
+
+.switch-on{
+   margin-left:24px;
+}
+
+.text-aligment {
+  height: 40px;
+  vertical-align: middle;
+  padding-top:10px;
+}
+
+
+
+/********* Code By *****/
+
+.codeby {
+  margin: auto;
+  height: 100%;
+  padding-top:7px;
+}
+.codebyfont{
+   color: rgb(187,66,73);
+   font-family: arial,sans-serif;
+}

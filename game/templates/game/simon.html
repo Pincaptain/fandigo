@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="{% static 'game/css/simon.css' %}">
+</head>
+
+<body>
+    <!--- Start of Simon Says Game --->
+
+    <div class="wrapper">
+        <!-- COLOR SECTIONS -->
+        <div class="dib push green but unclickable" id="3"></div>
+        <div class="dib push red but unclickable" id="2"></div>
+        <div class="dib push yellow but unclickable" id="1"></div>
+        <div class="dib push blue but unclickable" id="0"></div>
+
+        <!-- Start of Controller-->
+        <div class="controller dib">
+            <div class="title-div">
+                <p class="text-title dib">Simon</p>
+                <div class="dib reg-sign">&reg;
+                </div>
+            </div>
+            <!-- Count Down-->
+            <div class="countup dib">
+                <p class="countnum color-numoff">--</p>
+                <p class="text count-text">COUNT</p>
+            </div>
+            <!-- Start Button-->
+            <div class="start-div dib">
+                <button class="start-btn btn clickable" id="start"></button>
+                <p class="text count-text">START</p>
+            </div>
+            <!-- Strict Button-->
+            <div class="strict-div dib">
+                <button class="strict-light" id="mode-led"></button>
+                <button class="strict-btn btn dib clickable" id="mode"></button>
+                <p class="text count-text">STRICT</p>
+            </div>
+
+            <!-- Off/On Button-->
+            <div class="dib text offon-div">
+
+                <div class="dib">
+                    <p class="dib text-aligment yes">OFF</p>
+                </div>
+                <div class="offon-btns dib">
+                    <div class="off-btn dib" id="power-on"></div>
+                </div>
+
+                <div class="dib">
+                    <p class="dib text text-aligment">ON</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'game/js/simon.js' %}"></script>
+</body>
+
+</html>
+<!-- End of Controller-->

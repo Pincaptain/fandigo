@@ -61,3 +61,7 @@ class MemoryView(TemplateView):
 
 class SliderView(TemplateView):
     template_name = 'game/slider.html'
+
+
+class SimonView(TemplateView):
+    template_name = 'game/simon.html'
